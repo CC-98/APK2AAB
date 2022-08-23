@@ -65,3 +65,6 @@ BUILD SUCCESSFUL in 5s
 begin to sign：D:\APK2AAB/game_0.6.2.0.aab
 =>end with build success
 ~~~
+
+## **原理描述**
+![2](./MarkDownImage/2.png)
