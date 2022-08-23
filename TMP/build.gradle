@@ -1,0 +1,49 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+
+    buildToolsVersion "30.0.2"
+
+
+    defaultConfig {
+        applicationId "com.enjoymi.sgzj2.offical.test"
+        minSdkVersion 21
+
+        targetSdkVersion 28
+
+        versionCode 1000
+
+        versionName "0.6.2.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []  //这一行加不加都可以
+            jniLibs.srcDirs = ['libs']//这个必须加，因为我们把.so文件放在了libs文件夹中
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.play:core:1.10.0'
+    // implementation 'com.google.android.play:core-ktx:1.8.1'
+}
+
+android {
+    assetPacks = [":assets"]
+}

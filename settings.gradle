@@ -1,0 +1,3 @@
+include ':app'
+include ':assets'
+rootProject.name = "ProjectCode"

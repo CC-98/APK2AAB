@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:installLocation="auto" android:resizeableActivity="false" package="com.enjoymi.sgzj2.offical.test" platformBuildVersionCode="1000" platformBuildVersionName="0.6.2.0">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY"/>
+    <uses-permission android:name="android.webkit.permission.PLUGIN"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true" android:launchMode="singleTask" android:name="com.game.framework.unity.MainActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.onevcat.uniwebview.UniWebViewFileChooserActivity"/>
+        <service android:exported="false" android:name="com.ngds.pad.server.GamePadService" android:process=":pad"/>
+        <provider android:authorities="com.enjoymi.sgzj2.offical.test.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <meta-data android:name="BANGCLE_APP_KEY" android:value="5c1b0ded7f2f2b85"/>
+        <meta-data android:name="BANGCLE_SDK_VERSION" android:value="1.2"/>
+        <meta-data android:name="android.max_aspect" android:value="ratio_float"/>
+        <meta-data android:name="android.notch_support" android:value="false"/>
+        <meta-data android:name="notch.config" android:value="none"/>
+        <meta-data android:name="Nation" android:value=""/>
+        <meta-data android:name="Channel_ID" android:value=""/>
+        <meta-data android:name="GameID" android:value="3"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="com.xj.gamesir.sdk.bluetooth.GamesirService"/>
+        <service android:name="com.xj.gamesir.sdk.floatwindow.FloatWindowService"/>
+        <service android:name="com.xj.gamesir.sdk.bluetooth.ble.BluetoothBLeService"/>
+        <meta-data android:name="unity.build-id" android:value="a4c8ea8a-0c71-46dc-a200-0c63b8aef439"/>
+        <meta-data android:name="unity.splash-mode" android:value="2"/>
+        <meta-data android:name="unity.splash-enable" android:value="true"/>
+        <meta-data android:name="GCloud.GCloud.GameId" android:value="@string/gcloud_game_id"/>
+        <meta-data android:name="GCloud.GCloud.GameKey" android:value="@string/gcloud_game_key"/>
+        <meta-data android:name="GCloud.TDM.Test" android:value="false"/>
+        <meta-data android:name="GCloud.TDM.LogLevel" android:value="1"/>
+        <meta-data android:name="ASC_ChannelID" android:value="A160884"/>
+    </application>
+</manifest>
